@@ -1,8 +1,18 @@
 const btn = document.getElementById('btn');
-console.log("hey");
-btn.addEventListener("click", getInput);
+let input;
+
+btn.addEventListener("click", addItem);
+
+function addItem(){
+    getInput();
+    displayInput();
+    console.log('hey');
+}
 
 function getInput(){
-    let input = entry.elements[0].value;
-    console.log(input);
+    input = entry.elements[0].value;
+}
+
+function displayInput(){
+    document.getElementById('list').innerHTML = input;
 }

@@ -27,24 +27,25 @@ body{
 
 .entry{
     display: flex;
+    justify-content: center;
 }
 
 input{
     font-size: 24px;
     color: rgb(100, 100, 100);
     padding: 0 15px;
-    width: 100%;
+    width: 70%;
     height: 40px;
     border: none;
-    background-color: rgb(231, 231, 233);
-    border-radius: 5px 0 0 5px;
+    background-color: rgb(198, 198, 201);
+    border-radius: 50px 0 0 50px;
 }
 
 .button{
     background-color: #4CAF50;
     border: none;
     color: white;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 50px 50px 0;
     padding: 8px 20px;
     text-align: center;
     text-decoration: none;

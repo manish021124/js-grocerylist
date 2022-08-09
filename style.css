@@ -60,6 +60,17 @@ input{
     margin-top: 40px;
 }
 
-/* i{
-    color: #000;
-} */
+.list{
+    display: grid;
+    grid-template-columns: auto 25px 25px;
+}
+
+.list div{
+    margin: 10px;
+    font-size: 20px;
+}
+
+i{
+    font-size: 17px;
+    cursor: pointer;
+}

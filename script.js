@@ -1,4 +1,4 @@
-const btn = document.getElementById('btn');
+const btn = document.getElementById("btn");
 let input;
 
 btn.addEventListener("click", addItem);
@@ -6,7 +6,7 @@ btn.addEventListener("click", addItem);
 function addItem(){
     getInput();
     displayInput();
-    console.log('hey');
+    console.log("hey");
 }
 
 function getInput(){
@@ -14,5 +14,5 @@ function getInput(){
 }
 
 function displayInput(){
-    document.getElementById('list').innerHTML = input;
+    document.getElementById("list").innerHTML = input;
 }

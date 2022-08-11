@@ -1,10 +1,10 @@
 const btn = document.getElementById("btn");
 let input;
 
-btn.addEventListener("submit", addItem);
+btn.addEventListener("submit", function(){addItem(event)});
 
-function addItem(){
-    Event.preventDefault();
+function addItem(event){
+    event.preventDefault();
     getInput();
     displayInput();
 }

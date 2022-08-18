@@ -1,16 +1,17 @@
 const btn = document.getElementById("btn");
 let input;
 
-btn.addEventListener("submit", function(){addItem(event)});
+document.getElementById('entry').addEventListener("submit", addItem);
 
-function addItem(event){
-    event.preventDefault();
+function addItem(e){
+    e.preventDefault();
     getInput();
     displayInput();
 }
 
 function getInput(){
-    input = document.getElementById('entry').elements.value;
+    input = document.getElementById('name').value;
+    console.log(input);
 }
 
 function displayInput(){

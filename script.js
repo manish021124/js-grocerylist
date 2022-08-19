@@ -11,7 +11,6 @@ function addItem(e){
 
 function getInput(){
     input = document.getElementById('name').value;
-    console.log(input);
 }
 
 function displayInput(){
@@ -29,6 +28,7 @@ function displayInput(){
     const del = iDelete.classList;
 
     const list = document.getElementById("list");
+    const reset = document.getElementById("reset");
 
     div1.appendChild(text);
     div2.appendChild(iEdit);
@@ -56,4 +56,8 @@ function displayInput(){
 //     function editList(){
 //         input = text;
 //     }
+
+    if(list.childNodes != 0){
+        reset.style.visibility = "visible";
+    }
 }

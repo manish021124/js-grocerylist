@@ -102,4 +102,5 @@ i{
     font-size: 20px;
     color: rgb(241, 68, 68);;
     cursor: pointer;
+    visibility: hidden;
 }

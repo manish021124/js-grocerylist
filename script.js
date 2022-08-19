@@ -15,14 +15,25 @@ function getInput(){
 }
 
 function displayInput(){
-    const div = document.createElement("div");
+    const div1 = document.createElement("div");
+    const div2 = document.createElement("div");
+    const div3 = document.createElement("div");
     const text = document.createTextNode(input);
-    const i = document.createElement("i");
-    const edit = document.createAttribute("fa-solid fa-pen-to-square");
+    const iEdit = document.createElement("i");
+    const iDelete = document.createElement("i");
+    const edit = iEdit.classList;
+    const del = iDelete.classList;
     const list = document.getElementById("list");
 
-    div.appendChild(text);
-    i.appendChild(edit);
-    div.appendChild(i);
-    list.appendChild(div);
+    div1.appendChild(text);
+    div2.appendChild(iEdit);
+    div3.appendChild(iDelete);
+    list.appendChild(div1);
+    list.appendChild(div2);
+    list.appendChild(div3);
+
+    edit.add("fa-solid");
+    edit.add("fa-pen-to-square");
+    del.add("fa-solid");
+    del.add("fa-trash");
 }

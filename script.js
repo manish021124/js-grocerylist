@@ -37,6 +37,7 @@ function displayInput(){
     del.add("fa-solid");
     del.add("fa-trash");
 
+    //delete item
     iDelete.addEventListener("click", deleteList);
     function deleteList(){
         div1.remove();

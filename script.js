@@ -27,7 +27,7 @@ function displayInput(){
     //for new class
     const edit = iEdit.classList;
     const del = iDelete.classList;
-    
+
     const list = document.getElementById("list");
 
     div1.appendChild(text);
@@ -44,9 +44,16 @@ function displayInput(){
 
     //delete item
     iDelete.addEventListener("click", deleteList);
+    //edit item
+    // iEdit.addEventListener("click", editList);
+
     function deleteList(){
         div1.remove();
         div2.remove();
         div3.remove();
     }
+
+//     function editList(){
+//         input = text;
+//     }
 }

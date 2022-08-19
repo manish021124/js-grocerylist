@@ -15,5 +15,14 @@ function getInput(){
 }
 
 function displayInput(){
-    document.getElementById("list").innerHTML = input;
+    const div = document.createElement("div");
+    const text = document.createTextNode(input);
+    const i = document.createElement("i");
+    const edit = document.createAttribute("fa-solid fa-pen-to-square");
+    const list = document.getElementById("list");
+
+    div.appendChild(text);
+    i.appendChild(edit);
+    div.appendChild(i);
+    list.appendChild(div);
 }

@@ -36,4 +36,11 @@ function displayInput(){
     edit.add("fa-pen-to-square");
     del.add("fa-solid");
     del.add("fa-trash");
+
+    iDelete.addEventListener("click", deleteList);
+    function deleteList(){
+        div1.remove();
+        div2.remove();
+        div3.remove();
+    }
 }

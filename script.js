@@ -15,14 +15,19 @@ function getInput(){
 }
 
 function displayInput(){
+    //create div
     const div1 = document.createElement("div");
     const div2 = document.createElement("div");
     const div3 = document.createElement("div");
+    //add text
     const text = document.createTextNode(input);
+    //create i
     const iEdit = document.createElement("i");
     const iDelete = document.createElement("i");
+    //for new class
     const edit = iEdit.classList;
     const del = iDelete.classList;
+    
     const list = document.getElementById("list");
 
     div1.appendChild(text);

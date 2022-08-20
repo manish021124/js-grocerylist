@@ -7,6 +7,7 @@ let input;
 
 document.getElementById('entry').addEventListener("submit", addItem);
 btn.addEventListener('click', addedNotification);
+reset.addEventListener('click', resetNotification);
 //remove notification after certain period
 setInterval(disappearNotification, 3000);
 
@@ -98,6 +99,13 @@ function editedNotification(){
     message.innerHTML = "Item edited";
     message.style.backgroundColor = "rgb(62, 62, 252)";
     message.style.boxShadow = "0 2px 6px 0 rgb(62, 62, 252), 0 3px 15px 0 rgb(62, 62, 252)";
+}
+
+function resetNotification(){
+    notification.style.visibility = "visible";
+    message.innerHTML = "Cleared all";
+    message.style.backgroundColor = "rgb(248, 39, 39)";
+    message.style.boxShadow = "0 2px 6px 0 rgb(248, 39, 39), 0 3px 15px 0 rgb(248, 39, 39)";
 }
 
 function disappearNotification(){

@@ -55,7 +55,10 @@ function displayInput(){
 //     function editList(){
 //         input = text;
 //     }
+
+    //visibility of clear all on each click of trash
     iDelete.addEventListener('click', resetVisibilityCheck);
+    //normal visibility check
     resetVisibilityCheck();
 }
 

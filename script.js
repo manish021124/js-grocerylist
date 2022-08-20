@@ -1,4 +1,6 @@
 const btn = document.getElementById("btn");
+const list= document.getElementById("list");
+const reset = document.getElementById("reset");
 let input;
 
 document.getElementById('entry').addEventListener("submit", addItem);
@@ -27,9 +29,6 @@ function displayInput(){
     const edit = iEdit.classList;
     const del = iDelete.classList;
 
-    const list = document.getElementById("list");
-    const reset = document.getElementById("reset");
-
     div1.appendChild(text);
     div2.appendChild(iEdit);
     div3.appendChild(iDelete);
@@ -56,8 +55,14 @@ function displayInput(){
 //     function editList(){
 //         input = text;
 //     }
+    iDelete.addEventListener('click', resetVisibilityCheck);
+    resetVisibilityCheck();
+}
 
-    if(list.childNodes != 0){
+function resetVisibilityCheck(){
+    if(list.children.length != 0){
         reset.style.visibility = "visible";
+    }else{
+        reset.style.visibility = "hidden";
     }
 }

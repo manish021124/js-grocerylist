@@ -7,7 +7,7 @@ let input;
 
 document.getElementById('entry').addEventListener("submit", addItem);
 btn.addEventListener('click', addedNotification);
-
+setInterval(disappearNotification, 3000);
 function addItem(e){
     e.preventDefault();
     getInput();
@@ -76,5 +76,14 @@ function resetVisibilityCheck(){
 function addedNotification(){
     notification.style.visibility = "visible";
     message.innerHTML = "Item added";
-    // setTimeout(addedNotification, 1000);
+    message.style.backgroundColor = "rgb(59, 245, 90)";
+    message.style.boxShadow = "0 2px 6px 0 rgb(59, 245, 90), 0 3px 15px 0 rgb(59, 245, 90)";
+}
+
+function deletedNotification(){
+    
+}
+
+function disappearNotification(){
+    notification.style.visibility = "hidden";
 }

@@ -27,9 +27,7 @@ body{
 .message{
     text-align: center;
     padding: 10px 20px;
-    background-color: #52f158;
     border-radius: 10px;
-    box-shadow: 0 2px 6px 0 rgb(59, 245, 90), 0 3px 15px 0 rgb(59, 245, 90);
 }
 
 .header{

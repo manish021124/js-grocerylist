@@ -5,12 +5,21 @@ const reset = document.getElementById("reset");
 const notification = document.getElementById("notification");
 const message = document.getElementById("message");
 let input;
+let editMode = 0;
 
 document.getElementById('entry').addEventListener("submit", addItem);
-btn.addEventListener('click', addedNotification);
+btn.addEventListener("click", notify);
 reset.addEventListener('click', resetItem);
 //remove notification after certain period
 setInterval(disappearNotification, 3000);
+
+function notify(){
+    if(editMode == 1){
+        editedNotification();
+    }else{
+        addedNotification();
+    }
+}
 
 function addItem(e){
     e.preventDefault();
@@ -56,7 +65,7 @@ function displayInput(){
     //delete item
     iDelete.addEventListener("click", deleteList);
     //edit item
-    iEdit.addEventListener("click", editList);
+    iEdit.addEventListener("click", Edit);
 
     function deleteList(){
         div1.remove();
@@ -64,8 +73,11 @@ function displayInput(){
         div3.remove();
     }
 
-    function editList(){
+    function Edit(){
+        editMode = 1;
         nameValue.value = text.textContent;
+        deleteList();
+        btn.addEventListener("click", notify);
     }
 
     //visibility of clear all on each click of trash
@@ -74,8 +86,7 @@ function displayInput(){
     resetVisibilityCheck();
     //delete notification
     iDelete.addEventListener('click', deletedNotification);
-    //edit notification
-    iEdit.addEventListener('click', editedNotification);
+    editMode = 0;
 }
 
 function setDefault(){

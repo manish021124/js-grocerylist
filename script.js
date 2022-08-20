@@ -7,7 +7,7 @@ let input;
 
 document.getElementById('entry').addEventListener("submit", addItem);
 btn.addEventListener('click', addedNotification);
-reset.addEventListener('click', resetNotification);
+reset.addEventListener('click', resetItem);
 //remove notification after certain period
 setInterval(disappearNotification, 3000);
 
@@ -78,6 +78,15 @@ function resetVisibilityCheck(){
     }else{
         reset.style.visibility = "hidden";
     }
+}
+
+function resetItem(){
+    while(list.firstChild){
+        list.removeChild(list.firstChild);
+    }
+
+    resetVisibilityCheck();
+    resetNotification();
 }
 
 function addedNotification(){

@@ -1,9 +1,12 @@
 const btn = document.getElementById("btn");
 const list= document.getElementById("list");
 const reset = document.getElementById("reset");
+const notification = document.getElementById("notification");
+const message = document.getElementById("message");
 let input;
 
 document.getElementById('entry').addEventListener("submit", addItem);
+btn.addEventListener('click', addedNotification);
 
 function addItem(e){
     e.preventDefault();
@@ -68,4 +71,10 @@ function resetVisibilityCheck(){
     }else{
         reset.style.visibility = "hidden";
     }
+}
+
+function addedNotification(){
+    notification.style.visibility = "visible";
+    message.innerHTML = "Item added";
+    // setTimeout(addedNotification, 1000);
 }

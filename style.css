@@ -21,6 +21,7 @@ body{
 
 .notification{
     text-align: center;
+    visibility: hidden;
 }
 
 .message{

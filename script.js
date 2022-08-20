@@ -1,4 +1,5 @@
 const btn = document.getElementById("btn");
+const nameValue = document.getElementById("name");
 const list= document.getElementById("list");
 const reset = document.getElementById("reset");
 const notification = document.getElementById("notification");
@@ -14,11 +15,15 @@ setInterval(disappearNotification, 3000);
 function addItem(e){
     e.preventDefault();
     getInput();
-    displayInput();
 }
 
 function getInput(){
-    input = document.getElementById('name').value;
+    input = nameValue.value;
+    if(nameValue.value != ''){
+        displayInput();
+    }else{
+        errorNotification();
+    }
     setDefault();
 }
 
@@ -74,7 +79,7 @@ function displayInput(){
 }
 
 function setDefault(){
-    document.getElementById('name').value = '';
+    nameValue.value = '';
 }
 
 function resetVisibilityCheck(){
@@ -92,6 +97,13 @@ function resetItem(){
 
     resetVisibilityCheck();
     resetNotification();
+}
+
+function errorNotification(){
+    notification.style.visibility = "visible";
+    message.innerHTML = "Please Enter value";
+    message.style.backgroundColor = "rgb(248, 39, 39)";
+    message.style.boxShadow = "0 2px 6px 0 rgb(248, 39, 39), 0 3px 15px 0 rgb(248, 39, 39)";
 }
 
 function addedNotification(){

@@ -56,7 +56,7 @@ function displayInput(){
     //delete item
     iDelete.addEventListener("click", deleteList);
     //edit item
-    // iEdit.addEventListener("click", editList);
+    iEdit.addEventListener("click", editList);
 
     function deleteList(){
         div1.remove();
@@ -64,9 +64,9 @@ function displayInput(){
         div3.remove();
     }
 
-//     function editList(){
-//         input = text;
-//     }
+    function editList(){
+        nameValue.value = text.textContent;
+    }
 
     //visibility of clear all on each click of trash
     iDelete.addEventListener('click', resetVisibilityCheck);

@@ -19,6 +19,7 @@ function addItem(e){
 
 function getInput(){
     input = document.getElementById('name').value;
+    setDefault();
 }
 
 function displayInput(){
@@ -70,6 +71,10 @@ function displayInput(){
     iDelete.addEventListener('click', deletedNotification);
     //edit notification
     iEdit.addEventListener('click', editedNotification);
+}
+
+function setDefault(){
+    document.getElementById('name').value = '';
 }
 
 function resetVisibilityCheck(){

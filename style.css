@@ -88,18 +88,18 @@ i{
 }
 
 .fa-pen-to-square{
-    color: rgb(86, 86, 241);
+    color: rgb(62, 62, 252);
 }
 
 .fa-trash{
-    color: rgb(241, 68, 68);
+    color: rgb(248, 39, 39);
 }
 
 .reset{
     margin-top: 50px;
     text-align: center;
     font-size: 20px;
-    color: rgb(241, 68, 68);;
+    color: rgb(248, 39, 39);
     cursor: pointer;
     visibility: hidden;
 }

@@ -67,6 +67,8 @@ function displayInput(){
     resetVisibilityCheck();
     //delete notification
     iDelete.addEventListener('click', deletedNotification);
+    //edit notification
+    iEdit.addEventListener('click', editedNotification);
 }
 
 function resetVisibilityCheck(){
@@ -87,8 +89,15 @@ function addedNotification(){
 function deletedNotification(){
     notification.style.visibility = "visible";
     message.innerHTML = "Item deleted";
-    message.style.backgroundColor = "rgb(241, 68, 68)";
-    message.style.boxShadow = "0 2px 6px 0 rgb(241, 68, 68), 0 3px 15px 0 rgb(241, 68, 68)";
+    message.style.backgroundColor = "rgb(248, 39, 39)";
+    message.style.boxShadow = "0 2px 6px 0 rgb(248, 39, 39), 0 3px 15px 0 rgb(248, 39, 39)";
+}
+
+function editedNotification(){
+    notification.style.visibility = "visible";
+    message.innerHTML = "Item edited";
+    message.style.backgroundColor = "rgb(62, 62, 252)";
+    message.style.boxShadow = "0 2px 6px 0 rgb(62, 62, 252), 0 3px 15px 0 rgb(62, 62, 252)";
 }
 
 function disappearNotification(){

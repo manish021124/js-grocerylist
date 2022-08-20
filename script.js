@@ -7,7 +7,9 @@ let input;
 
 document.getElementById('entry').addEventListener("submit", addItem);
 btn.addEventListener('click', addedNotification);
+//remove notification after certain period
 setInterval(disappearNotification, 3000);
+
 function addItem(e){
     e.preventDefault();
     getInput();
@@ -63,6 +65,8 @@ function displayInput(){
     iDelete.addEventListener('click', resetVisibilityCheck);
     //normal visibility check
     resetVisibilityCheck();
+    //delete notification
+    iDelete.addEventListener('click', deletedNotification);
 }
 
 function resetVisibilityCheck(){
@@ -81,7 +85,10 @@ function addedNotification(){
 }
 
 function deletedNotification(){
-    
+    notification.style.visibility = "visible";
+    message.innerHTML = "Item deleted";
+    message.style.backgroundColor = "rgb(241, 68, 68)";
+    message.style.boxShadow = "0 2px 6px 0 rgb(241, 68, 68), 0 3px 15px 0 rgb(241, 68, 68)";
 }
 
 function disappearNotification(){
